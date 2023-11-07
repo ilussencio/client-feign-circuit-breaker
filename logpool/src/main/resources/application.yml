@@ -4,15 +4,15 @@ spring:
   data:
     mongodb:
       port: 27017
-      host: ilussencio.duckdns.org
+      host: ${HOST_REMOTO:localhost}
       database: myCompany
-      username: dev
-      password: zaq1zaq1
+      username: ${DB_USERNAME:admin}
+      password: ${DB_PASSWORD:admin}
   rabbitmq:
-    host: ilussencio.duckdns.org
+    host: ${HOST_REMOTO:localhost}
     port: 5672
-    username: guest
-    password: zaq1zaq1
+    username: ${RABBIT_USERNAME:guest}
+    password: ${RABBIT_PASSWORD:guest}
 
 # Configuracao da porta do serviço de forma aleatoria
 server:
